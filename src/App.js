@@ -14,11 +14,12 @@ class App extends Component{
   };
 
   handleReset = () => {
-    const counters = this.state.counters.map( c => {
-        c.value = 0;
-        return c;
-    });
-    this.setState({counters});
+    this.setState({counters: [
+      {id: 1, value: 0},
+      {id: 2, value: 0},
+      {id: 3, value: 0},
+      {id: 4, value: 0},
+    ]});
   };
 
   handleDelete = (counterID) => {
